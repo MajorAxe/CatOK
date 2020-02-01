@@ -64,11 +64,11 @@ using UnityEngine;
                 Undo.RecordObject(t, "Move " + t.name);
                 var position = t.position;
                 var mod = position.y % 1.1f;
-                if (Math.Abs(mod) < 0.01 || Math.Abs(mod - 1.1f) < 0.01)
-                {
+
+                if (Math.Abs(mod) < 1e-2 || Math.Abs(mod) - 1.1f < 1e-2)
                     mod = 0;
-                }
-                position.y += 1.1f - mod;
+
+                position.y += Math.Abs(mod) < 1e-2 ? 1.1f : 1.1f - mod;
                 t.position = new Vector3(position.x, position.y, position.z);
                 Debug.Log("Moving " + t.name + " to positive y.");
             }
@@ -80,13 +80,13 @@ using UnityEngine;
             foreach (var t in Selection.transforms) {
                 Undo.RecordObject(t, "Move " + t.name);
                 var position = t.position;
-                var mod = position.y % 1.1f;
-                if (Math.Abs(mod) < 0.01 || Math.Abs(mod - 1.1f) < 0.01)
-                {
-                    mod = 0;
-                }
 
-                position.y -= 1.1f - mod;
+                var mod = position.y % 1.1f;
+
+                if (Math.Abs(mod) < 1e-2 || Math.Abs(mod) - 1.1f < 1e-2)
+                    mod = 0;
+
+                position.y -= Math.Abs(mod) < 1e-2 ? 1.1f : mod;
                 t.position = new Vector3(position.x, position.y, position.z);
                 Debug.Log("Moving " + t.name + " to negative y.");
             }
