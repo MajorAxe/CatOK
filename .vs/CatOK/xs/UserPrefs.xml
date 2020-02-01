@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{55D08DD6-E029-6ECC-2CCF-9DBF76434F89}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Karting/Scripts/UI/MetaGameController.cs">
+    <Files>
+      <File FileName="Assets/Karting/Scripts/UI/MetaGameController.cs" Line="5" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
